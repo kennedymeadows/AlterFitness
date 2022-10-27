@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: AlterFitness_production
   username: AlterFitness
   password: <%= ENV["ALTERFITNESS_DATABASE_PASSWORD"] %>
