@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
+<div class="container">
+  <h1>Group Fitness Classes</h1>
 
-<h1>Gfcs</h1>
+  <div id="gfcs">
+    <% @gfcs.each do |gfc| %>
+      <%= render gfc %>
+      <p>
+        <%= link_to "Show this class", gfc %>
+      </p>
+    <% end %>
+  </div>
 
-<div id="gfcs">
-  <% @gfcs.each do |gfc| %>
-    <%= render gfc %>
-    <p>
-      <%= link_to "Show this gfc", gfc %>
-    </p>
-  <% end %>
+  <%= link_to "New Class", new_gfc_path %>
 </div>
-
-<%= link_to "New gfc", new_gfc_path %>

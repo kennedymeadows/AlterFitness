@@ -25,7 +25,7 @@ class GfcsController < ApplicationController
 
     respond_to do |format|
       if @gfc.save
-        format.html { redirect_to gfc_url(@gfc), notice: "Gfc was successfully created." }
+        format.html { redirect_to gfc_url(@gfc), notice: "Group Fitness Class was successfully created." }
         format.json { render :show, status: :created, location: @gfc }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class GfcsController < ApplicationController
   def update
     respond_to do |format|
       if @gfc.update(gfc_params)
-        format.html { redirect_to gfc_url(@gfc), notice: "Gfc was successfully updated." }
+        format.html { redirect_to gfc_url(@gfc), notice: "Group Fitness Class was successfully updated." }
         format.json { render :show, status: :ok, location: @gfc }
       else
         format.html { render :edit, status: :unprocessable_entity }
