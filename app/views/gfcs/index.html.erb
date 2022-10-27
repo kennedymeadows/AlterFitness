@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Gfcs</h1>
+
+<div id="gfcs">
+  <% @gfcs.each do |gfc| %>
+    <%= render gfc %>
+    <p>
+      <%= link_to "Show this gfc", gfc %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New gfc", new_gfc_path %>
