@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @gfc %>
+<div class="container">
+  <div>
+  <br>
+    <%= link_to "Edit this class", edit_gfc_path(@gfc) %> |
+    <%= link_to "Back to all classes", gfcs_path %>
+  <br><br>
+    <%= button_to "Delete this class", @gfc, method: :delete %>
+  </div>
+</div>

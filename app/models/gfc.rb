@@ -1,0 +1,2 @@
+class Gfc < ApplicationRecord
+end
