@@ -9,10 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap', "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= favicon_link_tag asset_path('PNG/64w/Black-Square-Solid-Alter Brandmark-RGB-64px-RGB.png') %>
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
+    <header>
+      <%= render 'layouts/navbar' %>
+      <%= render 'layouts/alerts' %>
+    </header>
     <%= yield %>
   </body>
 </html>
