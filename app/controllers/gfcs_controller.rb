@@ -1,9 +1,10 @@
 class GfcsController < ApplicationController
   before_action :set_gfc, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: %i[show index]
 
   # GET /gfcs or /gfcs.json
   def index
-    @gfcs = Gfc.all
+    @gfcs = Gfc.all.order(created_at: :desc)
   end
 
   # GET /gfcs/1 or /gfcs/1.json
@@ -22,6 +23,7 @@ class GfcsController < ApplicationController
   # POST /gfcs or /gfcs.json
   def create
     @gfc = Gfc.new(gfc_params)
+    @gfc.user = current_user
 
     respond_to do |format|
       if @gfc.save
@@ -65,6 +67,6 @@ class GfcsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def gfc_params
-      params.require(:gfc).permit(:title, :body)
+      params.require(:gfc).permit(:title, :body, :name)
     end
 end

@@ -1,12 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @gfc %>
+
 <div class="container">
+  <%= render @gfc %>
   <div>
   <br>
-    <%= link_to "Edit this class", edit_gfc_path(@gfc) %> |
-    <%= link_to "Back to all classes", gfcs_path %>
+    <%= link_to "Edit this class", edit_gfc_path(@gfc), class:"btn btn-secondary"%>
+    <%= link_to "Back to all classes", gfcs_path, class:"btn btn-secondary"%>
+    <br><br>
+    <%= link_to "Send to Group Fitness Studio", gfcs_path, class:"btn btn-primary" %>
   <br><br>
-    <%= button_to "Delete this class", @gfc, method: :delete %>
+    <%= button_to "Delete this class", @gfc, class:"btn btn-danger", method: :delete %>
   </div>
 </div>

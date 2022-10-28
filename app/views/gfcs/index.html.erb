@@ -1,15 +1,27 @@
 <p style="color: green"><%= notice %></p>
 <div class="container">
   <h1>Group Fitness Classes</h1>
-
+<%# This table needs to have date and time for the classes, so we need to add those attributes %>
   <div id="gfcs">
-    <% @gfcs.each do |gfc| %>
-      <%= render gfc %>
-      <p>
-        <%= link_to "Show this class", gfc %>
-      </p>
-    <% end %>
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Created By</th>
+        <th scope="col">Class Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @gfcs.each do |gfc| %>
+      <tr>
+        <th scope="row"><%= link_to gfc.title, gfc %></th>
+        <td><%= link_to gfc.user.name, user_path(gfc.user) %></td>
+        <td><%= gfc.created_at.strftime("%Y-%m-%d") %></td>
+      <% end %>
+    </tbody>
+    </table>
   </div>
-
-  <%= link_to "New Class", new_gfc_path %>
+    <div class="text-end">
+      <%= link_to "New Class", new_gfc_path, class:"btn btn-primary" %>
+    </div>
 </div>
