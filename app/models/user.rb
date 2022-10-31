@@ -4,4 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :gfcs
+  enum role: [:user, :moderator, :admin]
+  after_initialize :default_role
+  def default_role
+    self.role ||= :user
+  end
 end
