@@ -6,7 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.create(email: "simon@example.com", role:"admin", name:"Simon L", password: "password", password_confirmation: "password")
+User.create(email: "simon@example.com",
+    role: User.roles[:admin],
+    name:"Simon L",
+    password: "password",
+    password_confirmation: "password")
 
 Gfc.create(title: "T.E.A.M.", body: "T.E.A.M is a Strength and Conditioning format where we challenge you with the best of HIIT.  We stack Tabata rounds of intense agility, and core work, on top of Upper Body, and Lower Body Strength sets using EMOM (every minute on the minute)  and AMRAP (as many rounds as possible!)  rounds to give you a full-body, high-energy burn for some of the most challenging Metcon in LA. Come get Altered with your Tabata, EMOM, AMRAP, Metcon. ", user_id: User.first.id)
 Gfc.create(title: "KettleBUILT", body: "This class breaks down - and builds up - two dynamic kettlebell flows.  Kettlebell training provides unique benefits that aren’t easily achieved with other traditional equipment.  We break down each flow movement to ensure proper technique and execution, building up to a full kettlebell flow.  KettleBuilt is a full-body workout with a huge energy burn.  Kettlebell training will increase coordination, improve muscular balance, aesthetic physique, stability, mobility, agility, and strength gains.  If you don’t have a kettlebell routine yet, or if you’re looking to break a plateau, get KettleBuilt baby. ", user_id: User.first.id)

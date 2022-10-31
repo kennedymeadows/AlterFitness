@@ -5,7 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :gfcs
   enum role: [:user, :moderator, :admin]
-  after_initialize :default_role
+  after_initialize :default_role, if: :new_record?
+
+  private 
+  
   def default_role
     self.role ||= :user
   end
