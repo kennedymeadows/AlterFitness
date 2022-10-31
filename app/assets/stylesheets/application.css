@@ -16,3 +16,12 @@
 body {
     font-family: 'Barlow', sans-serif;
 }
+.my-custom-scrollbar {
+    position: relative;
+    height: 60vh;
+    max-height: 1000px;
+    overflow: auto;
+    }
+.table-wrapper-scroll-y {
+    display: block;
+    }
