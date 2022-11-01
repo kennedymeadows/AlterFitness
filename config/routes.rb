@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'users/profile'
+  get 'studio' => 'studio#studio'
+
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'

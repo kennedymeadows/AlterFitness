@@ -14,7 +14,9 @@
 
   <body>
     <header>
-      <%= render 'layouts/navbar' %>
+      <% unless controller_name == 'studio' %>
+        <%= render 'layouts/navbar' %>
+      <% end %>
       <%= render 'layouts/alerts' %>
     </header>
     <%= yield %>
