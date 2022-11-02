@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'users/profile'
   get 'studio' => 'studio#studio'
+  get 'pages/bwgrid.png'
 
   devise_for :users, controllers: {
     sessions: 'users/sessions',
