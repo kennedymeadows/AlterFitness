@@ -20,6 +20,17 @@ class GfcsController < ApplicationController
   def edit
   end
 
+  def remove_display
+  end
+
+  def send_to_display
+    @gfc = Gfc.find(params[:id])
+    @old_display = Gfc.where(studio: true)
+    @old_display.update_all(studio: false)
+    @gfc.update_attribute(:studio, true)
+  end
+
+
   # POST /gfcs or /gfcs.json
   def create
     @gfc = Gfc.new(gfc_params)
@@ -67,6 +78,6 @@ class GfcsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def gfc_params
-      params.require(:gfc).permit(:title, :body, :name)
+      params.require(:gfc).permit(:title, :body, :name, :studio)
     end
 end
