@@ -11,9 +11,6 @@ Rails.application.routes.draw do
       patch :send_to_display
     end
   end
-  
-  # get 'gfcs' => 'gfc#remove_display', as: :remove_display
-  # get 'gfcs/:id' => 'gfc#send_to_display', as: :send_to_display
 
   devise_for :users, controllers: {
     sessions: 'users/sessions',
