@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'users/profile'
   get 'studio' => 'studio#show'
-  resources :gfcs
+
+  resources :gfcs do
+    resources :workout_blocks
+  end
   resources :gfcs do
     member do
       post :send_to_display

@@ -9,6 +9,7 @@ class GfcsController < ApplicationController
 
   # GET /gfcs/1 or /gfcs/1.json
   def show
+    @workout_blocks = @gfc.workout_blocks.order(created_at: :asc)
   end
 
   # GET /gfcs/new
@@ -65,7 +66,7 @@ class GfcsController < ApplicationController
     @gfc.destroy
 
     respond_to do |format|
-      format.html { redirect_to gfcs_url, notice: "Gfc was successfully destroyed." }
+      format.html { redirect_to gfcs_url, notice: "Group fitness class was successfully destroyed." }
       format.json { head :no_content }
     end
   end
