@@ -1,17 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
-
 <div class="container">
   <%= render @gfc %>
+  <% @workout_blocks.each do |workout_block| %>
+    <%= render 'workout_blocks/workout_block', gfc: @gfc, workout_block: workout_block %>
+  <% end %>
+  <%= render 'workout_blocks/form', gfc: @gfc %>
+</div>
   <div>
   <br>
     <%= link_to "Edit this class", edit_gfc_path(@gfc), class:"btn btn-secondary"%>
     <%= link_to "Back to all classes", gfcs_path, class:"btn btn-secondary"%>
     <br><br>
-    <%# <%= link_to "Send to Group Fitness Studio", send_to_display_path(@gfc), class:"btn btn-primary" %>
-    <%# <%= button_to "Send to Group Fitness Studio", @gfc, class:"btn btn-primary", method: :send_to_display %>
     <%= button_to "Send to Display", send_to_display_gfc_path(@gfc), class:"btn btn-primary", method: :post %>
-  <br><br>
+  <br>
     <%= button_to "Delete this class", @gfc, class:"btn btn-danger", method: :delete %>
   </div>
 </div>
