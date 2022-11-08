@@ -25,7 +25,7 @@ overflow: auto;
 .table-wrapper-scroll-y {
 display: block;
 }
-.studio-body {
+/* .studio-body {
     background-color: black;
     margin: 0;
     padding: 0;
@@ -87,4 +87,4 @@ h2 {
     font-size: 1.3rem;
     max-height: 980px;
     text-align: right; 
-}
+} */

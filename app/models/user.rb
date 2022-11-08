@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :gfcs
+  has_many :workout_blocks
   enum role: [:user, :moderator, :admin]
   after_initialize :default_role, if: :new_record?
 
