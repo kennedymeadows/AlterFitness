@@ -4,6 +4,7 @@ class WorkoutBlocksController < ApplicationController
 
     def create
         @workout_block = @gfc.workout_blocks.create(workout_block_params)
+        @workout_block.user = current_user
 
         if @workout_block.save
             flash[:notice] = "Workout block has been created"

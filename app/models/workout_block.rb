@@ -1,5 +1,6 @@
 class WorkoutBlock < ApplicationRecord
   belongs_to :gfc
+  belongs_to :user
   validates_associated :gfc
   has_rich_text :body
 

@@ -79,6 +79,6 @@ class GfcsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def gfc_params
-      params.require(:gfc).permit(:title, :body, :name, :studio)
+      params.require(:gfc).permit(:title, :name, :studio)
     end
 end

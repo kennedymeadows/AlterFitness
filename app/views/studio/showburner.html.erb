@@ -1,0 +1,106 @@
+
+    <div class="studio-body-container"> 
+        <video class="video-container" width="9600" height="1080" autoplay muted loop>
+            <source src="http://marvel.nickandjt.com/alterstudiotest.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <div class="left-container">
+            <div class="class-title-left">
+                <h1><%= @studio.title %></h1>
+                <h2>with <%= @studio.user.name %></h2>
+            </div>
+            
+            <div class="class-flow-left">
+                <div class="row">
+                    <% case @studio.workout_blocks.size %>
+                    <% when 0 %>
+                        <div>
+                            There's nothing here!
+                        </div>
+                    <% when 1 %>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.first.body %>
+                        </div>
+                    <% when 2 %>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.first.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.second.body %>
+                        </div>
+                    <% when 3 %>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.first.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.second.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.third.body %>
+                        </div>
+                    <% when 4 %>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.first.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.second.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.third.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.fourth.body %>
+                        </div>
+                    <% end %>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="class-flow-right">
+                    <% case @studio.workout_blocks.size %>
+                    <% when 0 %>
+                        <div>
+                            There's nothing here!
+                        </div>
+                    <% when 1 %>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.first.body %>
+                        </div>
+                    <% when 2 %>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.first.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.second.body %>
+                        </div>
+                    <% when 3 %>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.first.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.second.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.third.body %>
+                        </div>
+                    <% when 4 %>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.first.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.second.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.third.body %>
+                        </div>
+                        <div class="col" >
+                            <%= @studio.workout_blocks.fourth.body %>
+                        </div>
+                    <% end %>
+            </div>
+            <div class="class-title-right">
+                <h1><%= @studio.title %></h1>
+                <h2>with <%= @studio.user.name %></h2>
+            </div>
+        </div>
+    </div>
+
