@@ -1,6 +1,6 @@
 class GfcsController < ApplicationController
   before_action :set_gfc, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!, except: %i[show index]
+  before_action :authenticate_user!
 
   # GET /gfcs or /gfcs.json
   def index
