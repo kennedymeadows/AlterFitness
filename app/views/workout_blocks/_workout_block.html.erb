@@ -2,4 +2,7 @@
     style="border: 1px solid black; padding: 1em; margin: 1em;" >
     <%= workout_block.user.name %>
     <%= workout_block.body %>
+    <% if current_user == workout_block.user %>
+
+    <% end %>
 </div>
