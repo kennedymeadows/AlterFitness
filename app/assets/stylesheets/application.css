@@ -25,13 +25,7 @@ overflow: auto;
 .table-wrapper-scroll-y {
 display: block;
 }
-.divider:after,
-.divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
-}
+
 /* .studio-body {
     background-color: black;
     margin: 0;
