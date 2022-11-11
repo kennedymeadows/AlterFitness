@@ -21,6 +21,18 @@ class WorkoutBlocksController < ApplicationController
         redirect_to gfc_path(@gfc)
     end
 
+    def update
+        @workout_block = @gfc.workout_blocks.find(params[:id])
+        
+        respond_to do |format|
+            if @workout_block.update(workout_block_params)
+                format.html { redirect_to gfc_url(@gfc), notice: 'Workout block has been updated' }
+            else
+                format.html { redirect to gfc_url(@gfc), notice: 'Workout block update failed' }
+            end
+        end
+    end
+
     private
 
     def set_gfc

@@ -1,8 +1,25 @@
-<div class="workout_block-<%= workout_block.id %> container"
-    style="border: 1px solid black; padding: 1em; margin: 1em;" >
-    <%= workout_block.user.name %>
-    <%= workout_block.body %>
+<div class="workout_block-<%= workout_block.id %>" >
+    <div id="workout-block-body-<%= workout_block.id %>">
+        <%= workout_block.body %>
+    </div>        
+    <div id="edit-form-<%= workout_block.id%>" class="d-none">
+            <%= render 'workout_blocks/form',
+             gfc: @gfc,
+            workout_block: workout_block,
+             submit_label: "Update" %>
+    </div>
     <% if current_user == workout_block.user %>
+        <div class="btn-group float-end">
+            <%= link_to "Edit", nil,  remote: true, class:"btn btn-secondary btn-sm",
+            data: {
+                controller: "workout-blocks",
+                action: "workout-blocks#toggleForm",
+                workout_blocks_form_param: "edit-form-#{workout_block.id}",
+                workout_blocks_body_param: "workout-block-body-#{workout_block.id}"                
+            } %>
+            <%# Easiest way to get rid of the issues with if you delete the 1st block, the second block becomes the first is just get rid of the delete button!! %>
+            <%= button_to "Delete", [@gfc, workout_block], class:"btn btn-danger btn-sm", method: :delete %>
+        </div>
 
     <% end %>
 </div>

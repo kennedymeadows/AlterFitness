@@ -1,79 +1,9 @@
 <div class="container">
   <%= render @gfc %>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <% if @workout_blocks.size >= 1 %>
-                <%# <h5 class="card-title"><%= @workout_blocks.first.user.name %>
-                <p class="card-text"><%= @workout_blocks.first.body %></p>
-              <% elsif @workout_blocks.size == 0 && @gfc.user == current_user %>
-                  <h6 class="card-title">New Workout Block</h6>
-                  <p class="card-text"><%= render 'workout_blocks/form', gfc: @gfc %></p>
-              <% else %>
-                <h5 class="card-title">Empty Workout Block</h5>
-                <p class="card-text">Use the workout blocks in order that they will be performed in class. You can also leave this one blank! Note: You must be the creator of the class to add workout blocks.</p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <% if @workout_blocks.size >= 2 %>
-                <%# <h5 class="card-title"><%= @workout_blocks.second.user.name %>
-                <p class="card-text"><%= @workout_blocks.second.body %></p>
-              <% elsif @workout_blocks.size == 1 %>
-                <% if @gfc.user == current_user %>
-                  <h6 class="card-title">New Workout Block</h6>
-                  <p class="card-text"><%= render 'workout_blocks/form', gfc: @gfc %></p>
-                <% end %>
-              <% else %>
-                <h5 class="card-title">Empty Workout Block</h5>
-                <p class="card-text">Use the workout blocks in order that they will be performed in class. You can also leave this one blank! Note: You must be the creator of the class to add workout blocks.</p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <% if @workout_blocks.size >= 3 %>
-                <%# <h5 class="card-title"><%= @workout_blocks.third.user.name %>
-                <p class="card-text"><%= @workout_blocks.third.body %></p>
-              <% elsif @workout_blocks.size == 2 %>
-                <h6 class="card-title">New Workout Block</h6>
-                <p class="card-text"><%= render 'workout_blocks/form', gfc: @gfc %></p>
-              <% else %>
-                <h5 class="card-title">Empty Workout Block</h5>
-                <p class="card-text">Use the workout blocks in order that they will be performed in class. You can also leave this one blank! Note: You must be the creator of the class to add workout blocks.</p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <% if @workout_blocks.size >= 4 %>
-                <%# <h5 class="card-title"><%= @workout_blocks.fourth.user.name %>
-                <p class="card-text"><%= @workout_blocks.fourth.body %></p>
-              <% elsif @workout_blocks.size == 3 %>
-                <h6 class="card-title">New Workout Block</h6>
-                <p class="card-text"><%= render 'workout_blocks/form', gfc: @gfc %></p>
-              <% else %>
-                <h5 class="card-title">Empty Workout Block</h5>
-                <p class="card-text">Use the workout blocks in order that they will be performed in class. You can also leave this one blank! Note: You must be the creator of the class to add workout blocks.</p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
 </div>
   <br>
   <div class="container">
-    <div class="btn-group">
+    <div class="btn-group float-end">
       <%= link_to "Back to all classes", gfcs_path, class:"btn btn-secondary"%>
       <%= button_to "Send to Display", send_to_display_gfc_path(@gfc), class:"btn btn-primary", method: :post %>
       <% if @gfc.user == current_user %>
