@@ -1,6 +1,6 @@
-<%= form_with(model: [gfc, gfc.workout_blocks.build]) do |f| %>
+<%= form_with(model: [gfc, workout_block]) do |f| %>
     <div class="form-control">
         <%= f.rich_text_area :body %>
-        <%= f.submit "Submit", class: "btn btn-primary btn-sm mt-1" %>
+        <%= f.submit submit_label, class: "btn btn-primary btn-sm mt-1" %>
     </div>
 <% end %>
