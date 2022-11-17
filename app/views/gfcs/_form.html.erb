@@ -10,7 +10,9 @@
       </ul>
     </div>
   <% end %>
-
+  <div>
+    <%= form.collection_select(:class_type_id, ClassType.all, :id, :title, prompt: "Select Class Format") %>
+  </div>
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :class_types
   get 'users/profile'
   get 'studio' => 'studio#show'
 

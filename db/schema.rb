@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_11_211705) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_17_190812) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +52,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_11_211705) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "class_types", force: :cascade do |t|
+    t.string "title"
+    t.integer "block_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "gfc_id"
+    t.index ["gfc_id"], name: "index_class_types_on_gfc_id"
+  end
+
   create_table "gfcs", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -59,6 +68,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_11_211705) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.boolean "studio", default: false
+    t.bigint "class_type_id"
+    t.index ["class_type_id"], name: "index_gfcs_on_class_type_id"
     t.index ["user_id"], name: "index_gfcs_on_user_id"
   end
 
@@ -91,6 +102,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_11_211705) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "class_types", "gfcs"
+  add_foreign_key "gfcs", "class_types"
   add_foreign_key "gfcs", "users"
   add_foreign_key "workout_blocks", "gfcs"
   add_foreign_key "workout_blocks", "users"
