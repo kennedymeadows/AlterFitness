@@ -1,6 +1,7 @@
 <div id="<%= dom_id gfc %>">
    
   <h3>
+    
     <strong><%= gfc.class_type.title %> - <%= gfc.title %></strong>
   </h3>
 
@@ -12,17 +13,6 @@
             <div class="card-body">
               <% if @workout_blocks.size >= 1 %>
                 <p class="card-text"><%= render @workout_blocks.first %></p>
-              <% elsif @workout_blocks.size == 0 && @gfc.user == current_user %>
-                  <h6 class="card-title">New Workout Block</h6>
-                  <p class="card-text">
-                    <%= render 'workout_blocks/form', 
-                    gfc: @gfc,
-                    workout_block: @gfc.workout_blocks.build,
-                    submit_label: "Reply" %>
-                  </p>
-              <% else %>
-                <h5 class="card-title">Empty Workout Block</h5>
-                <p class="card-text">Use the workout blocks in order that they will be performed in class. You can also leave this one blank! Note: You must be the creator of the class to add workout blocks.</p>
               <% end %>
             </div>
           </div>
@@ -32,19 +22,6 @@
             <div class="card-body">
               <% if @workout_blocks.size >= 2 %>
                 <p class="card-text"><%= render @workout_blocks.second %></p>
-              <% elsif @workout_blocks.size == 1 %>
-                <% if @gfc.user == current_user %>
-                  <h6 class="card-title">New Workout Block</h6>
-                    <p class="card-text">
-                      <%= render 'workout_blocks/form', 
-                      gfc: @gfc,
-                      workout_block: @gfc.workout_blocks.build,
-                      submit_label: "Reply" %>
-                    </p>
-                <% end %>
-              <% else %>
-                <h5 class="card-title">Empty Workout Block</h5>
-                <p class="card-text">Use the workout blocks in order that they will be performed in class. You can also leave this one blank! Note: You must be the creator of the class to add workout blocks.</p>
               <% end %>
             </div>
           </div>
@@ -56,17 +33,6 @@
             <div class="card-body">
               <% if @workout_blocks.size >= 3 %>
                 <p class="card-text"><%= render @workout_blocks.third %></p>
-              <% elsif @workout_blocks.size == 2 %>
-                <h6 class="card-title">New Workout Block</h6>
-                  <p class="card-text">
-                    <%= render 'workout_blocks/form', 
-                    gfc: @gfc,
-                    workout_block: @gfc.workout_blocks.build,
-                    submit_label: "Reply" %>
-                  </p>
-              <% else %>
-                <h5 class="card-title">Empty Workout Block</h5>
-                <p class="card-text">Use the workout blocks in order that they will be performed in class. You can also leave this one blank! Note: You must be the creator of the class to add workout blocks.</p>
               <% end %>
             </div>
           </div>
@@ -76,17 +42,6 @@
             <div class="card-body">
               <% if @workout_blocks.size >= 4 %>
                 <p class="card-text"><%= render @workout_blocks.fourth %></p>
-              <% elsif @workout_blocks.size == 3 %>
-                <h6 class="card-title">New Workout Block</h6>
-                  <p class="card-text">
-                    <%= render 'workout_blocks/form', 
-                    gfc: @gfc,
-                    workout_block: @gfc.workout_blocks.build,
-                    submit_label: "Reply" %>
-                  </p>                
-              <% else %>
-                <h5 class="card-title">Empty Workout Block</h5>
-                <p class="card-text">Use the workout blocks in order that they will be performed in class. You can also leave this one blank! Note: You must be the creator of the class to add workout blocks.</p>
               <% end %>
             </div>
           </div>

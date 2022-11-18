@@ -7,7 +7,6 @@
       <%= link_to "Back to all classes", gfcs_path, class:"btn btn-secondary"%>
       <%= button_to "Send to Display", send_to_display_gfc_path(@gfc), class:"btn btn-primary", method: :post %>
       <% if @gfc.user == current_user %>
-        <%= link_to "Edit this class", edit_gfc_path(@gfc), class:"btn btn-secondary"%>
         <%= button_to "Delete this class", @gfc, class:"btn btn-danger", method: :delete %>
       <% end %>
       </div>

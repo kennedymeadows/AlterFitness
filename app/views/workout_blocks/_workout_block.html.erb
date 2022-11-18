@@ -17,8 +17,6 @@
                 workout_blocks_form_param: "edit-form-#{workout_block.id}",
                 workout_blocks_body_param: "workout-block-body-#{workout_block.id}"                
             } %>
-            <%# Easiest way to get rid of the issues with if you delete the 1st block, the second block becomes the first is just get rid of the delete button!! %>
-            <%= button_to "Delete", [@gfc, workout_block], class:"btn btn-danger btn-sm", method: :delete %>
         </div>
 
     <% end %>

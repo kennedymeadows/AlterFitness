@@ -37,6 +37,7 @@ class GfcsController < ApplicationController
     @gfc = Gfc.new(gfc_params)
     @gfc.user = current_user
 
+
     respond_to do |format|
       if @gfc.save
         format.html { redirect_to gfc_url(@gfc), notice: "Group Fitness Class was successfully created." }
@@ -63,6 +64,7 @@ class GfcsController < ApplicationController
 
   # DELETE /gfcs/1 or /gfcs/1.json
   def destroy
+    @gfc.workout_blocks.destroy_all
     @gfc.destroy
 
     respond_to do |format|

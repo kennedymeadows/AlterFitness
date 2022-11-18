@@ -1,5 +1,6 @@
 class ClassTypesController < ApplicationController
   before_action :set_class_type, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /class_types or /class_types.json
   def index
