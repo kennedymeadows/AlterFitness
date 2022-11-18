@@ -1,14 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">  
+  <p style="color: green"><%= notice %></p>
 
-<h1>Class types</h1>
+  <h1>Class types</h1>
 
-<div id="class_types">
-  <% @class_types.each do |class_type| %>
-    <%= render class_type %>
-    <p>
-      <%= link_to "Show this class type", class_type %>
-    </p>
-  <% end %>
+  <div id="class_types">
+    <% @class_types.each do |class_type| %>
+      <%= render class_type %>
+      <p>
+        <%= link_to "Show this class type", class_type %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New class type", new_class_type_path, class: "btn btn-primary" %>
 </div>
-
-<%= link_to "New class type", new_class_type_path %>
