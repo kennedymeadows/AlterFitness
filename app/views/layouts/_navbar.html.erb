@@ -9,11 +9,7 @@
             <li class="nav-item">
                 <%= link_to "Classes", gfcs_path, class:'nav-link' %>
             </li>
-            <% if current_user.admin? %>
-                <li class="nav-item">
-                    <%= link_to "Class Templates", class_types_path, class:'nav-link' %>
-                </li>
-            <% end %>
+            <%= render 'user/class_type_session_manager' %>
         </ul>
         <ul class="navbar-nav">
             <%= render 'user/session_manager' %>
