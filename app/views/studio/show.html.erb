@@ -76,10 +76,7 @@
     </head>
     <body>
         <div class="body-container">
-            <video class="video-container" width="9600" height="1080" autoplay muted loop>
-                <source src="https://storage.cloud.google.com/alter-studio/Sequence%2002_1.webm" type="video/webm">
-                Your browser does not support the video tag.
-            </video>
+            <%= video_tag(["http://127.0.0.1:8080/Sequence%2002_3.webm"], :size => "9600x1080", muted: :muted, autoplay: :autoplay, loop: :loop) %>
             <div class="left-container">
                 <% case @studio.workout_blocks.size %>
                 <% when 0 %>
