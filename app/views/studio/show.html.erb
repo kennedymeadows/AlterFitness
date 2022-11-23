@@ -76,14 +76,14 @@
     </head>
     <body>
         <div class="body-container">
-            <%= video_tag(["http://127.0.0.1:8080/Sequence%2002_3.webm"], :size => "9600x1080", muted: :muted, autoplay: :autoplay, loop: :loop) %>
+            <%= video_tag(["http://localhost:9990/Sequence%2002_3.webm"], :size => "9600x1080", muted: :muted, autoplay: :autoplay, loop: :loop) %>
             <div class="left-container">
                 <% case @studio.workout_blocks.size %>
                 <% when 0 %>
                     <div class="row">
                         <div class="class-title-right col">
                             <h1><%= @studio.title %></h1>
-                            <h2>with <%= @studio.user.name %></h2>
+                            <h2>with <%= @studio.user.full_name %></h2>
                         </div>
                         <div class="class-flow-right col">
                             There's nothing here!
