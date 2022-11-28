@@ -15,14 +15,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+    render turbo_stream: turbo_stream.replace("tab_content", partial: "devise/registrations/edit", locals: { resource: resource } )
+  end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    render turbo_stream: turbo_stream.replace("tab_content", partial: "devise/registrations/update", locals: { resource: resource } )
+  end
 
   # DELETE /resource
   # def destroy
@@ -50,6 +50,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       resource.update_with_password(params)
     end
   end
+  
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :role])
   end

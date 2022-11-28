@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   resources :class_types
-  get 'users/profile'
+  # get 'users/profile'
   get 'studio' => 'studio#show'
+
+  authenticated :user, ->(user) { user.admin? } do
+    get 'users', to: 'users#users'
+    get '/u/:id', to: 'users#profile', as: 'user'
+    get '/u/:id', to: 'users#edit_role', as: 'edit_role'
+    
+  end
 
   resources :gfcs do
     resources :workout_blocks
@@ -19,9 +26,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  get '/u/:id', to: 'users#profile', as: 'user'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
   # Defines the root path route ("/")
   root "gfcs#index"
 end
