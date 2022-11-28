@@ -1,7 +1,13 @@
 <% if current_user %>
+    <li class="nav-item">
+        <%= link_to "Classes", gfcs_path, class:'nav-link' %>
+    </li>
     <% if current_user.admin? %>
         <li class="nav-item">
             <%= link_to "Class Templates", class_types_path, class:'nav-link' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to "User Management", users_path, class:'nav-link' %>
         </li>
     <% end %>
     <li class ="nav-item">

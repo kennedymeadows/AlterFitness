@@ -1,0 +1,8 @@
+<%= turbo_frame_tag :user_role do %>
+  <%= form_with model: @user, url: user_path(@user) do |form| %>
+    <%= form.select :role, options_for_select(User.roles.map { |key, value| 
+    [key.capitalize, value]
+  }, @user.role) %>
+    <%= form.submit "Save" %>
+  <% end %>
+<% end %>
