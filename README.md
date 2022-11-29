@@ -7,7 +7,7 @@ Local Windows application built in Electron.
 Local hosting of videos explained within the electron app repository. https://github.com/kennedymeadows/alterElectron
 </p>
 <br>
-### Devise / Authentication
+<h3>Devise / Authentication</h3>
 <p>User authentication uses the devise gem. It's set up to limit sign ups to the alterclubs.com domain through the Google workspace application authentication console.
 <br>
 Environment variables / keys are stored in Render within the environment console.
