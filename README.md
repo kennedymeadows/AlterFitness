@@ -1,24 +1,16 @@
-# README
+# ALTER FITNESS STUDIO
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on rails web application with postgres database hosted on Render.
+Local Windows application built in Electron.
+Local hosting of videos explained within the electron app repository. https://github.com/kennedymeadows/alterElectron
 
-Things you may want to cover:
+* Devise / Authentication
+User authentication uses the devise gem. It's set up to limit sign ups to the alterclubs.com domain through the Google workspace application authentication console.
+Environment variables / keys are stored in Render within the environment console.
 
 * Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ruby 3.1.2p20
+* Rails version
+Rails 7.0.4
+* Postgres version
+postgres (PostgreSQL) 14.5 (Homebrew)
