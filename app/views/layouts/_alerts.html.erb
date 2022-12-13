@@ -1,5 +1,9 @@
 <% if notice %>
-    <p class="notice"><%= notice %></p>
+    <div class="alert alert-light d-flex justify-content-center" role="alert">
+    <%= notice %>
+    </div>
 <% elsif alert %>
-    <p class="alert"><%= alert %></p>
+    <div class="alert alert-primary d-flex justify-content-center" role="alert">
+    <%= alert %>
+    </div>
 <% end %>

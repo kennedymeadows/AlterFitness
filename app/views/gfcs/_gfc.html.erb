@@ -1,51 +1,45 @@
-<div id="<%= dom_id gfc %>">
-   
-  <h3>
-    
-    <strong><%= gfc.class_type.title %> - <%= gfc.title %></strong>
-  </h3>
-
-  <h5>Class by <%= gfc.user.full_name %></h5>
-
-  <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <% if @workout_blocks.size >= 1 %>
-                <p class="card-text"><%= render @workout_blocks.first %></p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <% if @workout_blocks.size >= 2 %>
-                <p class="card-text"><%= render @workout_blocks.second %></p>
-              <% end %>
-            </div>
-          </div>
+<div id="<%= dom_id gfc %>"> 
+  <p class="h3"><%= gfc.class_type.title %> - <%= gfc.title %></p>
+  <p class="h5 text-muted" style="margin-top:10px;">Class by <%= gfc.user.full_name %></p>
+  <p><%= gfc.instruction %>
+  <div class="row" style="margin-top: 20px;">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <% if @workout_blocks.size >= 1 %>
+            <p class="card-text"><%= render @workout_blocks.first %></p>
+          <% end %>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <% if @workout_blocks.size >= 3 %>
-                <p class="card-text"><%= render @workout_blocks.third %></p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <% if @workout_blocks.size >= 4 %>
-                <p class="card-text"><%= render @workout_blocks.fourth %></p>
-              <% end %>
-            </div>
-          </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <% if @workout_blocks.size >= 2 %>
+            <p class="card-text"><%= render @workout_blocks.second %></p>
+          <% end %>
         </div>
       </div>
-
+    </div>
+  </div>
+  <div class="row" style="margin-top: 30px;">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <% if @workout_blocks.size >= 3 %>
+            <p class="card-text"><%= render @workout_blocks.third %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <% if @workout_blocks.size >= 4 %>
+            <p class="card-text"><%= render @workout_blocks.fourth %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
