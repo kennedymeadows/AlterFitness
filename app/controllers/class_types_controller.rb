@@ -9,6 +9,7 @@ class ClassTypesController < ApplicationController
 
   # GET /class_types/1 or /class_types/1.json
   def show
+    @video = Video.find(@class_type.videos_id)
   end
 
   # GET /class_types/new
@@ -66,6 +67,6 @@ class ClassTypesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def class_type_params
-      params.require(:class_type).permit(:title, :block_count, :instruction)
+      params.require(:class_type).permit(:title, :block_count, :instruction, :videos_id)
     end
 end

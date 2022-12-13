@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_13_164453) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_13_175727) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,7 +59,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_164453) do
     t.datetime "updated_at", null: false
     t.bigint "gfc_id"
     t.string "instruction"
+    t.bigint "videos_id"
     t.index ["gfc_id"], name: "index_class_types_on_gfc_id"
+    t.index ["videos_id"], name: "index_class_types_on_videos_id"
   end
 
   create_table "gfcs", force: :cascade do |t|
@@ -70,8 +72,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_164453) do
     t.bigint "user_id", null: false
     t.boolean "studio", default: false
     t.bigint "class_type_id"
+    t.bigint "videos_id"
     t.index ["class_type_id"], name: "index_gfcs_on_class_type_id"
     t.index ["user_id"], name: "index_gfcs_on_user_id"
+    t.index ["videos_id"], name: "index_gfcs_on_videos_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -92,6 +96,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_164453) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "videos", force: :cascade do |t|
+    t.string "title"
+    t.string "filename"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "workout_blocks", force: :cascade do |t|
     t.bigint "gfc_id", null: false
     t.datetime "created_at", null: false
@@ -104,8 +115,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_164453) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "class_types", "gfcs"
+  add_foreign_key "class_types", "videos", column: "videos_id"
   add_foreign_key "gfcs", "class_types"
   add_foreign_key "gfcs", "users"
+  add_foreign_key "gfcs", "videos", column: "videos_id"
   add_foreign_key "workout_blocks", "gfcs"
   add_foreign_key "workout_blocks", "users"
 end
