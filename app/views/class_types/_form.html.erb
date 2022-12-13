@@ -25,7 +25,7 @@
       </div>
 
       <div class="">
-        <%# this is where you pick default video %>
+        <%= form.collection_select :video_id, Video.all, :id, :name %>
       </div>
       <%= form.submit "Submit", class: "btn btn-primary" %>
     </div>
