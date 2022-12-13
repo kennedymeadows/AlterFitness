@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :videos
   resources :class_types
   # get 'users/profile'
   get 'studio' => 'studio#show'

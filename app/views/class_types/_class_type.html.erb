@@ -3,18 +3,10 @@
     <strong>Title:</strong>
     <%= class_type.title %>
   </p>
+
   <p>
     <strong>Block count:</strong>
     <%= class_type.block_count %>
   </p>
-  <p>
-    <strong>Instructions:</strong>
-    <%= class_type.instruction %>
-  </p>
-  <p>
-    <strong>Default Video:</strong>
-      <% if @video %>
-        <% Video.find(class_type.videos_id).title %>
-      <% end %>
-  </p>
+
 </div>

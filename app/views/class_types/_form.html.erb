@@ -24,10 +24,9 @@
         <%= form.text_area :instruction, {class:"form-control", placeholder:"Instructions for this class. Need to write out how we want to instruct how to make these instructions lol", rows: "3"} %>
       </div>
 
-      <div class="mb-3">
-        <%= form.collection_select :videos_id, Video.order(:title),:id, :title %>
+      <div class="">
+        <%# this is where you pick default video %>
       </div>
-
       <%= form.submit "Submit", class: "btn btn-primary" %>
     </div>
   </div>
