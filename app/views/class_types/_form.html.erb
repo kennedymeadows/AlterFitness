@@ -10,18 +10,24 @@
       </ul>
     </div>
   <% end %>
+  <div class="card">
+    <div class="card-body">
+      <div class="mb-3">
+        <%= form.text_field :title, {class:"form-control-lg", placeholder:"Class title"} %>
+      </div>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+      <div class="mb-3">
+        <%= form.number_field :block_count, {class:"form-control-sm", placeholder:"Workout block count"} %>
+      </div>
+      
+      <div class="mb-3">
+        <%= form.text_area :instruction, {class:"form-control", placeholder:"Instructions for this class. Need to write out how we want to instruct how to make these instructions lol", rows: "3"} %>
+      </div>
 
-  <div>
-    <%= form.label :block_count, style: "display: block" %>
-    <%= form.number_field :block_count %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+      <div class="">
+        <>
+      </div>
+      <%= form.submit "Submit", class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_17_190812) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_13_164453) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -58,6 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_17_190812) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "gfc_id"
+    t.string "instruction"
     t.index ["gfc_id"], name: "index_class_types_on_gfc_id"
   end
 
