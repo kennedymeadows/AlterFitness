@@ -1,13 +1,17 @@
 <div id="<%= dom_id gfc %>"> 
   <p class="h3"><%= gfc.class_type.title %> - <%= gfc.title %></p>
-  <p class="h5 text-muted" style="margin-top:10px;">Class by <%= gfc.user.full_name %></p>
+  <p class="h5 text-muted" style="margin-top:16px;">Class by <%= gfc.user.full_name %></p>
   <p style="margin-top: 20px;"><%= gfc.class_type.instruction %></p>
   <p style="margin-top: 20px;">The background of this class will be the <%= gfc.class_type.video.name %> video</p>
+  <p style="margin-top: 20px;"><strong>Important:</strong> 
+  List your workouts within your workout blocks using the "unnumbered list" icon <i class="bi bi-list-ul"></i> selected.
+  </p>
   <div class="row" style="margin-top: 20px;">
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
           <% if @workout_blocks.size >= 1 %>
+            <h5 class="card-title"><%= gfc.workout_blocks.first.name %></h5>
             <p class="card-text"><%= render @workout_blocks.first %></p>
           <% end %>
         </div>
@@ -17,6 +21,7 @@
       <div class="card">
         <div class="card-body">
           <% if @workout_blocks.size >= 2 %>
+            <h5 class="card-title"><%= gfc.workout_blocks.second.name %></h5>
             <p class="card-text"><%= render @workout_blocks.second %></p>
           <% end %>
         </div>
@@ -28,6 +33,7 @@
       <div class="card">
         <div class="card-body">
           <% if @workout_blocks.size >= 3 %>
+            <h5 class="card-title"><%= gfc.workout_blocks.third.name %></h5>
             <p class="card-text"><%= render @workout_blocks.third %></p>
           <% end %>
         </div>
@@ -37,6 +43,7 @@
       <div class="card">
         <div class="card-body">
           <% if @workout_blocks.size >= 4 %>
+            <h5 class="card-title"><%= gfc.workout_blocks.fourth.name %></h5>
             <p class="card-text"><%= render @workout_blocks.fourth %></p>
           <% end %>
         </div>

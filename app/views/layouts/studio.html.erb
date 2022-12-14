@@ -1,74 +1,86 @@
 <html>
-    <head>
-        <title>Studio</title>
-        <%= stylesheet_link_tag "studio" %>
-    </head>
- <body>
+  <head>
+    <title>Studio</title>
+    <%= stylesheet_link_tag "studio" %>
+  </head>
+  <body>
     <div class="body-container">
-        <% video_url = "http://localhost:9990" + @studio.class_type.video.filename %>
-        <%= video_tag(video_url, size: "9600x1080", muted: :muted, autoplay: :autoplay, loop: :loop) %>
-        <div class="whole-wall-grid">
+      <% video_url = "http://localhost:9990" + @studio.class_type.video.filename%> 
+      <%= video_tag(video_url,
+          size: "9600x1080",
+          muted: :muted, 
+          autoplay: :autoplay, 
+          loop: :loop) %>
+      <div class="whole-wall-grid">
         <!-- Blank space on the left -->
         <div class="border"></div>
         <!-- This is the left information block -->
         <div class="workout-block">
-            <div class="block-title-grid">
+          <div class="block-title-grid">
             <div class="block-title">
-                <span class="block-title-span"><%= @studio.workout_blocks.first.name %></span>
+              <span class="block-title-span"
+                ><%= @studio.workout_blocks.first.name %></span
+              >
             </div>
             <div></div>
             <div class="block-title">
-                <span class="block-title-span"><%= @studio.workout_blocks.second.name %></span>
+              <span class="block-title-span"
+                ><%= @studio.workout_blocks.second.name %></span
+              >
             </div>
-            </div>
-            <div class="workout-sub-block">
+          </div>
+          <div class="workout-sub-block">
             <div class="workouts-column">
-                <ul>
-                    <%= @studio.workout_blocks.first.body %>
-                </ul>
+              <ul>
+                <%= @studio.workout_blocks.first.body %>
+              </ul>
             </div>
             <div></div>
             <div class="workouts-column">
-                <ul>
-                    <%= @studio.workout_blocks.second.body %>
-                </ul>
+              <ul>
+                <%= @studio.workout_blocks.second.body %>
+              </ul>
             </div>
-            </div>
+          </div>
         </div>
         <!-- This is the center title section of the screen -->
         <div class="center-title">
-            <div class="title-grid"><%= @studio.title %></div>
-            <div></div>
-            <div class="instructor-grid"><%= @studio.user.full_name %></div>
+          <div class="title-grid"><%= @studio.class_type.title %></div>
+          <div></div>
+          <div class="instructor-grid"><%= @studio.user.full_name %></div>
         </div>
         <!-- This is the right information block -->
         <div class="workout-block">
-            <div class="block-title-grid">
+          <div class="block-title-grid">
             <div class="block-title">
-                <span class="block-title-span"><%= @studio.workout_blocks.first.name %></span>
+              <span class="block-title-span"
+                ><%= @studio.workout_blocks.first.name %></span
+              >
             </div>
             <div></div>
             <div class="block-title">
-                <span class="block-title-span"><%= @studio.workout_blocks.second.name %></span>
+              <span class="block-title-span"
+                ><%= @studio.workout_blocks.second.name %></span
+              >
             </div>
-            </div>
-            <div class="workout-sub-block">
+          </div>
+          <div class="workout-sub-block">
             <div class="workouts-column">
-                <ul>
-                    <%= @studio.workout_blocks.first.body %>
-                </ul>
+              <ul>
+                <%= @studio.workout_blocks.first.body %>
+              </ul>
             </div>
             <div></div>
             <div class="workouts-column">
-                <ul>
-                    <%= @studio.workout_blocks.second.body %>
-                </ul>
+              <ul>
+                <%= @studio.workout_blocks.second.body %>
+              </ul>
             </div>
-            </div>
+          </div>
         </div>
         <!-- Blank space on the right -->
         <div class="border"></div>
-        </div>
+      </div>
     </div>
   </body>
 </html>
