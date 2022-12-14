@@ -1,6 +1,11 @@
 <%= form_with(model: [gfc, workout_block]) do |f| %>
     <div class="form-control">
+        <div style="margin-bottom:20px;">
+            <%= f.text_field :name, {class:"form-control-lg", placeholder:"Workout block title"}%>
+        </div>
         <%= f.rich_text_area :body %>
-        <%= f.submit submit_label, class: "btn btn-primary btn-sm mt-1" %>
+        <div style="margin-top: 10px;">
+            <%= f.submit submit_label, class: "btn btn-primary btn-sm mt-1" %>
+        </div>
     </div>
 <% end %>

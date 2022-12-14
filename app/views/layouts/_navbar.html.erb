@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-    <%= link_to image_tag('PNG/256w/White-Logotype-Alter Brandmark-RGB-256px-RGB.png', height: "24px", :alt => "Alter", :class => "css"), root_path, class:"navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <%= link_to image_tag('PNG/512w/White-Logotype-Alter Brandmark-RGB-512px-RGB.png', height: "24px", :alt => "Alter", :class => "css"), root_path, class:"navbar-brand", style:"margin-left: 20px;" %>
+    <button class="navbar-toggler" style="margin-right: 20px;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" style="margin-right: 20px;" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <%= render 'user/admin_session_manager' %>
         </ul>

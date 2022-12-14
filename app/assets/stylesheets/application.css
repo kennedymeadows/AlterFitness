@@ -11,87 +11,19 @@
 * It is generally better to create a new file per style scope.
 *
 *= require_tree .
+*= stub studio
 *= require_self
 */
 body {
-font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 300px;
 }
 .my-custom-scrollbar {
-position: relative;
-height: 60vh;
-max-height: 1000px;
-overflow: auto;
+  position: relative;
+  height: 60vh;
+  max-height: 1000px;
+  overflow: auto;
 }
 .table-wrapper-scroll-y {
-display: block;
+  display: block;
 }
-.divider:after,
-.divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
-}
-/* .studio-body {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    font-family: 'Barlow', sans-serif;
-    font-size: 30px;
-    color: white;
-}
-.studio-body-container {
-    width: 9600px;
-    height: 1080px;
-}
-.video-container {
-    z-index: 0;
-    width: 9600px;
-    height: 1080px;
-}
-.left-container {
-    z-index: 1;
-    position: absolute;
-    display: flex;
-    top: 100px;
-    left: 1000px;
-}
-.right-container {
-    z-index: 1;
-    position: absolute;
-    display: flex ;
-    top: 100px;
-    right: 1000px;
-}
-h1, h2 {
-    line-height: .3em;
-    margin: .6em 0;
-}
-h2 {
-    font-weight: 300;
-}
-.class-title-left {
-    padding: 20px;
-    margin-right: 40px;
-    width: auto;
-    height: 130px;
-    border: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-.class-flow-left {
-    font-size: 1.3rem;
-    max-height: 980px;
-}
-.class-title-right {
-    padding: 20px;
-    margin-left: 40px;
-    width: auto;
-    height: 130px;
-    border: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-.class-flow-right {
-    font-size: 1.3rem;
-    max-height: 980px;
-    text-align: right; 
-} */

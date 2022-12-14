@@ -66,6 +66,6 @@ class ClassTypesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def class_type_params
-      params.require(:class_type).permit(:title, :block_count)
+      params.require(:class_type).permit(:title, :block_count, :instruction, :video_id)
     end
 end

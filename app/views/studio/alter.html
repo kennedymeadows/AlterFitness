@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AlterStudio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: linear-gradient(black, rgb(41, 41, 41));
+        margin: 0;
+        font-family: "Barlow", sans-serif;
+        font-weight: 500;
+        color: white;
+        width: 9600px;
+        height: 1080px;
+        -webkit-font-smoothing: antialiased;
+        text-shadow: rgb(155, 155, 155) 1px 0 10px;
+        white-space: nowrap;
+        text-overflow: "";
+        overflow: hidden;
+      }
+      .background-video {
+        position: absolute;
+      }
+      .whole-wall-grid {
+        position: absolute;
+        display: grid;
+        grid-template-rows: 1080px;
+        grid-template-columns: 700px 1960px 4280px 1960px 700px;
+      }
+      .workout-block {
+        display: grid;
+        grid-template-rows: 180px 900px;
+      }
+      .block-title-grid {
+        display: grid;
+        grid-template-rows: 180px;
+        grid-template-columns: 910px 140px 910px;
+      }
+      .workout-sub-block {
+        display: grid;
+        grid-template-columns: 910px 140px 910px;
+      }
+      .center-title {
+        display: grid;
+        grid-template-rows: 280px 1fr 200px;
+        grid-template-columns: 1fr;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .title-grid {
+        font-size: 180px;
+        padding-top: 50px;
+      }
+      .instructor-grid {
+        font-size: 90px;
+        padding-bottom: 100px;
+      }
+      .block-title {
+        display: grid;
+        font-size: 80px;
+        text-transform: uppercase;
+        border-bottom: 12px solid white;
+      }
+      .block-title-span {
+        padding-left: 140px;
+        padding-top: 70px;
+        padding-bottom: 0px;
+      }
+      .workouts-column {
+        width: 910px;
+        white-space: nowrap;
+        text-overflow: "";
+        overflow: hidden;
+      }
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        font-size: 50px;
+        list-style: none;
+        padding-left: none;
+        padding-top: 20px;
+        line-height: 90px;
+        counter-reset: item;
+      }
+      li {
+        border-bottom: 4px solid white;
+        text-transform: capitalize;
+        counter-increment: item;
+      }
+      li:before {
+        content: counter(item, decimal-leading-zero) ".";
+        display: inline-block;
+        width: 140px;
+      }
+      li:nth-of-type(1n + 9) {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <video class="background-video" src="Red.webm" muted autoplay loop></video>
+    <div class="whole-wall-grid">
+      <!-- Blank space on the left -->
+      <div class="border"></div>
+      <!-- This is the left information block -->
+      <div class="workout-block">
+        <div class="block-title-grid">
+          <div class="block-title">
+            <span class="block-title-span">Lower Body / Core</span>
+          </div>
+          <div></div>
+          <div class="block-title">
+            <span class="block-title-span">Push / Pull / Press</span>
+          </div>
+        </div>
+        <div class="workout-sub-block">
+          <div class="workouts-column">
+            <ul>
+              <li>Plank - Shoulder Tap Plank - Shoulder Tap</li>
+              <li>Hop straddle - Deadlift</li>
+              <li>Swing-Rack</li>
+              <li>Deceleration Squat</li>
+              <li>X-Body Throw - Rack</li>
+              <li>Strict press</li>
+              <li>Drop squat - Hop to Plans</li>
+            </ul>
+          </div>
+          <div></div>
+          <div class="workouts-column">
+            <ul>
+              <li>Beast Push-Up</li>
+              <li>Ape-Squat Prisoner Curl</li>
+              <li>Overhead press</li>
+              <li>Chest Supported Goodn-Morning</li>
+              <li>Dead-Catch</li>
+              <li>Double Halo</li>
+              <li>Double Round the World</li>
+              <li>Deadlift Drop Off</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- This is the center title section of the screen -->
+      <div class="center-title">
+        <div class="title-grid">KettleBuilt</div>
+        <div></div>
+        <div class="instructor-grid">joseph T. Smith</div>
+      </div>
+      <!-- This is the right information block -->
+      <div class="workout-block">
+        <div class="block-title-grid">
+          <div class="block-title">
+            <span class="block-title-span">Lower Body / Core</span>
+            <hr
+              style="border: 0; margin: 0; vertical-align: baseline"
+              width="100%"
+              color="white"
+              size="12px"
+            />
+          </div>
+          <div></div>
+          <div class="block-title">
+            <span class="block-title-span">Push / Pull / Press</span>
+            <hr
+              style="border: 0; margin: 0"
+              width="100%"
+              color="white"
+              size="12px"
+            />
+          </div>
+        </div>
+        <div class="workout-sub-block">
+          <div class="workouts-column">
+            <ul>
+              <li>Plank - Shoulder Tap</li>
+              <li>Hop straddle - Deadlift</li>
+              <li>Swing-Rack</li>
+              <li>Deceleration Squat</li>
+              <li>X-Body Throw - Rack</li>
+              <li>Strict press</li>
+              <li>Drop squat - Hop to Plans</li>
+            </ul>
+          </div>
+          <div></div>
+          <div class="workouts-column">
+            <ul>
+              <li>Beast Push-Up</li>
+              <li>Ape-Squat Prisoner Curl</li>
+              <li>Overhead press</li>
+              <li>Chest Supported Goodn-Morning</li>
+              <li>Dead-Catch</li>
+              <li>Double Halo</li>
+              <li>Double Round the World</li>
+              <li>Deadlift Drop Off</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Blank space on the right -->
+      <div class="border"></div>
+    </div>
+  </body>
+</html>

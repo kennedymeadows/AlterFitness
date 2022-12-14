@@ -1,4 +1,15 @@
 <div class="container">
-    <h2>Log in</h2>
-    <%= render "devise/shared/links" %>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <div class="card" style="margin-top: 50px; padding: 20px;">
+            <%# <img class="card-img-top" src="PNG/256w/Black-Square-Outline-Alter Brandmark-RGB-256px-RGB.png" alt="Card image cap"> %>
+            <%= image_tag("PNG/512w/Black-Triangle-Outline-Alter Brandmark-RGB-512px-RGB.png", class: "card-img-top", alt: "Alter")%>
+            <h2 class="card-title">Log in</h2>
+            <p class="card-text">You must be signed in with your alter email address to access the group fitness studio workout builder</p>
+            <%= render "devise/shared/links" %>
+        </div>
+    </div>
+    <div class="col"></div>
+  </div>
 </div>
