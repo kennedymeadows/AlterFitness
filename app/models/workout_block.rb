@@ -3,6 +3,8 @@ class WorkoutBlock < ApplicationRecord
   belongs_to :user
   validates_associated :gfc
   has_rich_text :body
+  validates :name, length: { maximum: 15 }
+
 
   def body
     rich_text_body || build_rich_text_body(body: read_attribute(:body))

@@ -19,6 +19,9 @@
         height: 1080px;
         -webkit-font-smoothing: antialiased;
         text-shadow: rgb(155, 155, 155) 1px 0 10px;
+        white-space: nowrap;
+        text-overflow: "";
+        overflow: hidden;
       }
       .background-video {
         position: absolute;
@@ -27,29 +30,25 @@
         position: absolute;
         display: grid;
         grid-template-rows: 1080px;
-        grid-template-columns: 600px 1960px 4480px 1960px 600px;
+        grid-template-columns: 700px 1960px 4280px 1960px 700px;
       }
-      .workout-block-left,
-      .workout-block-right {
+      .workout-block {
         display: grid;
         grid-template-rows: 180px 900px;
       }
       .block-title-grid {
         display: grid;
         grid-template-rows: 180px;
-        grid-template-columns: 910px 1fr 910px;
+        grid-template-columns: 910px 140px 910px;
       }
-      .workout-sub-block-left,
-      .workout-sub-block-right {
+      .workout-sub-block {
         display: grid;
-        grid-template-columns: 140px 770px 140px 140px 1fr;
+        grid-template-columns: 910px 140px 910px;
       }
       .center-title {
         display: grid;
         grid-template-rows: 280px 1fr 200px;
         grid-template-columns: 1fr;
-      }
-      .center-title {
         text-align: center;
         text-transform: uppercase;
       }
@@ -63,14 +62,20 @@
       }
       .block-title {
         display: grid;
-        grid-template-rows: 160px 20px;
-        font-size: 70px;
+        font-size: 80px;
         text-transform: uppercase;
+        border-bottom: 12px solid white;
       }
       .block-title-span {
         padding-left: 140px;
-        padding-top: 40px;
+        padding-top: 70px;
         padding-bottom: 0px;
+      }
+      .workouts-column {
+        width: 910px;
+        white-space: nowrap;
+        text-overflow: "";
+        overflow: hidden;
       }
       ul,
       li {
@@ -83,55 +88,43 @@
         padding-left: none;
         padding-top: 20px;
         line-height: 90px;
+        counter-reset: item;
       }
       li {
         border-bottom: 4px solid white;
         text-transform: capitalize;
+        counter-increment: item;
+      }
+      li:before {
+        content: counter(item, decimal-leading-zero) ".";
+        display: inline-block;
+        width: 140px;
+      }
+      li:nth-of-type(1n + 9) {
+        display: none;
       }
     </style>
   </head>
   <body>
     <video class="background-video" src="Red.webm" muted autoplay loop></video>
     <div class="whole-wall-grid">
+      <!-- Blank space on the left -->
       <div class="border"></div>
-      <div class="workout-block-left">
+      <!-- This is the left information block -->
+      <div class="workout-block">
         <div class="block-title-grid">
           <div class="block-title">
             <span class="block-title-span">Lower Body / Core</span>
-            <hr
-              style="border: 0; margin: 0; vertical-align: baseline"
-              width="100%"
-              color="white"
-              size="12px"
-            />
           </div>
           <div></div>
           <div class="block-title">
             <span class="block-title-span">Push / Pull / Press</span>
-            <hr
-              style="border: 0; margin: 0"
-              width="100%"
-              color="white"
-              size="12px"
-            />
           </div>
         </div>
-
-        <div class="workout-sub-block-left">
-          <div class="numbers-column">
-            <ul>
-              <li>01.</li>
-              <li>02.</li>
-              <li>03.</li>
-              <li>04.</li>
-              <li>05.</li>
-              <li>06.</li>
-              <li>07.</li>
-            </ul>
-          </div>
+        <div class="workout-sub-block">
           <div class="workouts-column">
             <ul>
-              <li>Plank - Shoulder Tap</li>
+              <li>Plank - Shoulder Tap Plank - Shoulder Tap</li>
               <li>Hop straddle - Deadlift</li>
               <li>Swing-Rack</li>
               <li>Deceleration Squat</li>
@@ -141,18 +134,6 @@
             </ul>
           </div>
           <div></div>
-          <div class="numbers-column">
-            <ul>
-              <li>01.</li>
-              <li>02.</li>
-              <li>03.</li>
-              <li>04.</li>
-              <li>05.</li>
-              <li>06.</li>
-              <li>07.</li>
-              <li>08.</li>
-            </ul>
-          </div>
           <div class="workouts-column">
             <ul>
               <li>Beast Push-Up</li>
@@ -167,12 +148,14 @@
           </div>
         </div>
       </div>
+      <!-- This is the center title section of the screen -->
       <div class="center-title">
         <div class="title-grid">KettleBuilt</div>
         <div></div>
         <div class="instructor-grid">joseph T. Smith</div>
       </div>
-      <div class="workout-block-right">
+      <!-- This is the right information block -->
+      <div class="workout-block">
         <div class="block-title-grid">
           <div class="block-title">
             <span class="block-title-span">Lower Body / Core</span>
@@ -194,19 +177,7 @@
             />
           </div>
         </div>
-
-        <div class="workout-sub-block-left">
-          <div class="numbers-column">
-            <ul>
-              <li>01.</li>
-              <li>02.</li>
-              <li>03.</li>
-              <li>04.</li>
-              <li>05.</li>
-              <li>06.</li>
-              <li>07.</li>
-            </ul>
-          </div>
+        <div class="workout-sub-block">
           <div class="workouts-column">
             <ul>
               <li>Plank - Shoulder Tap</li>
@@ -219,18 +190,6 @@
             </ul>
           </div>
           <div></div>
-          <div class="numbers-column">
-            <ul>
-              <li>01.</li>
-              <li>02.</li>
-              <li>03.</li>
-              <li>04.</li>
-              <li>05.</li>
-              <li>06.</li>
-              <li>07.</li>
-              <li>08.</li>
-            </ul>
-          </div>
           <div class="workouts-column">
             <ul>
               <li>Beast Push-Up</li>
@@ -245,6 +204,7 @@
           </div>
         </div>
       </div>
+      <!-- Blank space on the right -->
       <div class="border"></div>
     </div>
   </body>

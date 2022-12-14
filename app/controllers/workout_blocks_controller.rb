@@ -28,7 +28,7 @@ class WorkoutBlocksController < ApplicationController
             if @workout_block.update(workout_block_params)
                 format.html { redirect_to gfc_url(@gfc), notice: 'Workout block has been updated' }
             else
-                format.html { redirect to gfc_url(@gfc), notice: 'Workout block update failed' }
+                format.html { redirect_to gfc_url(@gfc), notice: 'Workout block update failed. Note: The title has a maximum length of 15 characters' }
             end
         end
     end
@@ -40,7 +40,7 @@ class WorkoutBlocksController < ApplicationController
     end
 
     def workout_block_params
-        params.require(:workout_block).permit(:body)
+        params.require(:workout_block).permit(:body, :name)
     end
 
 end
