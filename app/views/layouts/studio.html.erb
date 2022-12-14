@@ -5,7 +5,7 @@
   </head>
   <body>
     <div class="body-container">
-      <% video_url = "http://localhost:9990" + @studio.class_type.video.filename%> 
+      <% video_url = "http://localhost:9990/" + @studio.class_type.video.filename%> 
       <%= video_tag(video_url,
           size: "9600x1080",
           muted: :muted, 
