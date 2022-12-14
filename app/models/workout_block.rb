@@ -3,7 +3,7 @@ class WorkoutBlock < ApplicationRecord
   belongs_to :user
   validates_associated :gfc
   has_rich_text :body
-  validates :name, length: { maximum: 15 }
+  validates :name, length: { maximum: 20 }
 
 
   def body
