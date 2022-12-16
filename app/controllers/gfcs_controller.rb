@@ -4,9 +4,13 @@ class GfcsController < ApplicationController
 
   # GET /gfcs or /gfcs.json
   def index
-    @gfcs = Gfc.all.order(created_at: :desc)
+    @gfcs = Gfc.all.order(updated_at: :desc)
   end
 
+  def my_classes
+    @my_gfcs = Gfc.where(user: :current_user)
+  end
+  
   # GET /gfcs/1 or /gfcs/1.json
   def show
     @workout_blocks = @gfc.workout_blocks.order(created_at: :asc)
