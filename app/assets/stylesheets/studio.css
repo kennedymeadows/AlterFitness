@@ -29,6 +29,7 @@ video {
   grid-template-rows: 180px 900px;
 }
 .block-title-grid {
+  font-family: "Barlow Condensed";
   display: grid;
   grid-template-rows: 180px;
   grid-template-columns: 910px 140px 910px;
@@ -39,6 +40,7 @@ video {
 }
 .center-title {
   display: grid;
+  font-family: "Barlow Condensed";
   grid-template-rows: 280px 1fr 200px;
   grid-template-columns: 1fr;
   text-align: center;
