@@ -4,17 +4,21 @@
     <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">Class</th>
+        <th scope="col">Name</th>
+        <th scope="col">Class Format</th>
+        <th scope="col">Video Background</th>
         <th scope="col">Created By</th>
-        <th scope="col">Creation Date</th>
+        <th scope="col">Last Modified</th>
       </tr>
     </thead>
     <tbody>
       <% @gfcs.each do |gfc| %>
       <tr>
         <th scope="row"><%= link_to gfc.title, gfc %></th>
+        <td><%= gfc.class_type.title %></td>
+        <td><%= gfc.class_type.video.name %></td>
         <td><%= link_to gfc.user.full_name, user_path(gfc.user) %></td>
-        <td><%= gfc.created_at.strftime("%Y-%m-%d") %></td>
+        <td><%= gfc.updated_at.strftime("%Y-%m-%d") %></td>
       <% end %>
     </tbody>
     </table>
