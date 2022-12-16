@@ -18,7 +18,7 @@ video {
   position: absolute;
   display: grid;
   grid-template-rows: 1080px;
-  grid-template-columns: 700px 1960px 4280px 1960px 700px;
+  grid-template-columns: 900px 1960px 3880px 1960px 900px;
 }
 .border {
   border: 0;
