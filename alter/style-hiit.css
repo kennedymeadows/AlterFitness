@@ -16,7 +16,7 @@ body {
   position: absolute;
   display: grid;
   grid-template-rows: 1080px;
-  grid-template-columns: 700px 1960px 4280px 1960px 700px;
+  grid-template-columns: 900px 1960px 3880px 1960px 900px;
 }
 /* Dead space, also serves as the container for the clock if used */
 .border {
@@ -43,6 +43,7 @@ body {
   display: grid;
   grid-template-rows: 180px 500px 400px;
 }
+
 /* These three classes make up the title section of the 
 workout blocks */
 .block-title-grid {

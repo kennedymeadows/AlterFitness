@@ -1,0 +1,136 @@
+.whole-wall-grid {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 1080px;
+  grid-template-columns: 1900px 1960px 1880px 1960px 1900px;
+}
+
+/* Dead space, also serves as the container for the clock if used */
+.border {
+  border: 0;
+  border-width: 0px;
+}
+
+/* The live clock which is tied to the javascript script section */
+.clock-container-left,
+.clock-container-right {
+  font-size: 80px;
+  display: grid;
+}
+.clock-container-left {
+  justify-items: left;
+}
+.clock-container-right {
+  justify-items: right;
+}
+
+/* Whole container for the workout block and information sections */
+.workout-block {
+  display: grid;
+  grid-template-rows: 220px 860px;
+}
+
+/* These three classes make up the title section of the 
+  workout blocks */
+.block-title-grid {
+  font-family: "Barlow Condensed";
+  display: grid;
+  grid-template-rows: 220px;
+  grid-template-columns: 910px 140px 910px;
+}
+
+.block-title {
+  display: grid;
+  font-size: 90px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 12px solid white;
+  align-self: end;
+}
+
+.block-title-span {
+  padding-left: 140px;
+}
+
+/* These are the sections which contain the lists of workouts */
+.workouts-column {
+  width: 910px;
+  white-space: nowrap;
+  text-overflow: "";
+  overflow: hidden;
+}
+
+.workout-sub-block {
+  display: grid;
+  grid-template-columns: 910px 140px 910px;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  font-size: 50px;
+  list-style: none;
+  padding-left: none;
+  padding-top: 20px;
+  line-height: 90px;
+  counter-reset: item;
+}
+li {
+  margin-left: 0;
+  /* border-bottom: 4px solid white; */
+  text-transform: capitalize;
+  counter-increment: item;
+}
+li:before {
+  content: counter(item, decimal-leading-zero) ".";
+  display: inline-block;
+  width: 140px;
+}
+li:nth-of-type(1n + 9) {
+  display: none;
+}
+
+/* The center section */
+.meta-title {
+  display: grid;
+  font-family: "Barlow Condensed";
+  grid-template-rows: 220px 200px 1fr;
+  grid-template-columns: 1fr;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.right-meta {
+  justify-items: end;
+}
+.left-meta {
+  justify-items: start;
+}
+
+.title-grid {
+  font-size: 180px;
+  padding-top: 50px;
+  align-self: end;
+}
+
+.right-title {
+  text-align: right;
+  padding-right: 200px;
+}
+.left-title {
+  text-align: left;
+  padding-left: 200px;
+}
+
+.instructor-grid {
+  font-size: 120px;
+  align-self: end;
+}
+
+.triangle-logo {
+  width: 400px;
+  align-self: center;
+}

@@ -1,0 +1,18 @@
+      <div class="whole-wall-grid">
+        <!-- Title space on the left -->
+        <div class="meta-title left-meta">
+          <div class="title-grid left-title"><%= @studio.class_type.title %></div>
+          <div class="instructor-grid left-title"><%= @studio.user.full_name %></div>
+          <%= image_tag("PNG/1600w/White-Triangle-Outline-Alter Brandmark-1600px-RGB.png", class: "triangle-logo left-title") %>
+        </div>
+        
+        <!-- This is the center title section of the screen -->
+        <div class="border"></div>
+        
+        <!-- Title space on the right -->
+        <div class="meta-title right-meta">
+          <div class="title-grid right-title"><%= @studio.class_type.title %></div>
+          <div class="instructor-grid right-title"><%= @studio.user.full_name %></div>
+          <%= image_tag("PNG/1600w/White-Triangle-Outline-Alter Brandmark-1600px-RGB.png", class: "triangle-logo right-title") %>
+        </div>
+      </div>

@@ -50,4 +50,25 @@
       </div>
     </div>
   </div>
+    <div class="row" style="margin-top: 30px;">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <% if @workout_blocks.size >= 5 %>
+            <h5 class="card-title"><%= gfc.workout_blocks.fifth.name %></h5>
+            <p class="card-text"><%= render @workout_blocks.fifth %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <% if @workout_blocks.size >= 6 %>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

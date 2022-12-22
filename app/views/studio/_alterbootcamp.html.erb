@@ -1,0 +1,75 @@
+      <div class="gradient-underlays">
+        <div class="gb-red"></div>
+        <div class="gb-blue"></div>
+        <div class="gb-green"></div>
+      </div>
+      <div class="whole-wall-grid">
+        <!-- Blank space on the left -->
+        <div class="meta-title left-meta">
+          <div class="title-grid left-title"><%= @studio.class_type.title %></div>
+          <div class="instructor-grid left-title"><%= @studio.user.full_name %></div>
+          <%= image_tag("PNG/1600w/White-Triangle-Outline-Alter Brandmark-1600px-RGB.png", class: "triangle-logo left-title") %>
+        </div>
+        <!-- This is the left information block -->
+        <div class="workout-block">
+          <div class="block-title-grid">
+            <div class="block-title">
+              <span class="block-title-span"
+                ><%= @studio.workout_blocks.first.name %></span
+              >
+            </div>
+          </div>
+          <div class="workout-sub-block">
+            <div class="workouts-column">
+              <ul>
+                <%= @studio.workout_blocks.first.body %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- This is the center title section of the screen -->
+        <div class="border"></div>
+        <!-- This is the second information block -->
+        <div class="workout-block">
+          <div class="block-title-grid">
+            <div class="block-title">
+              <span class="block-title-span"
+                ><%= @studio.workout_blocks.second.name %></span
+              >
+            </div>
+          </div>
+          <div class="workout-sub-block">
+            <div class="workouts-column">
+              <ul>
+                <%= @studio.workout_blocks.second.body %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Blank space on the right -->
+        <div class="border"></div>
+        <%# Third block %>
+        <div class="workout-block">
+          <div class="block-title-grid">
+            <div class="block-title">
+              <span class="block-title-span"
+                ><%= @studio.workout_blocks.third.name %></span
+              >
+            </div>
+          </div>
+          <div class="workout-sub-block">
+            <div class="workouts-column">
+              <ul>
+                <%= @studio.workout_blocks.third.body %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Blank space on the right -->
+        <%# Title section right %>
+        <div class="meta-title right-meta">
+          <div class="title-grid right-title"><%= @studio.class_type.title %></div>
+          <div class="instructor-grid right-title"><%= @studio.user.full_name %></div>
+          <%= image_tag("PNG/1600w/White-Triangle-Outline-Alter Brandmark-1600px-RGB.png", class: "triangle-logo right-title") %>
+        </div>
+      </div>
