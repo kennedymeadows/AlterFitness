@@ -5,8 +5,9 @@ body {
   font-family: "Barlow", sans-serif;
   font-weight: 500;
   color: white;
-  width: 9600px;
-  height: 1080px;
+  width: 100%;
+  height: 100%;
+  overflow: none;
   -webkit-font-smoothing: antialiased;
   text-shadow: rgb(155, 155, 155) 1px 0 10px;
 }

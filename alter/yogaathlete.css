@@ -2,7 +2,7 @@
   position: absolute;
   display: grid;
   grid-template-rows: 1080px;
-  grid-template-columns: 1900px 1960px 1880px 1960px 1900px;
+  grid-template-columns: 1900px 5800px 1900px;
 }
 
 /* Dead space, also serves as the container for the clock if used */
