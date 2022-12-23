@@ -8,7 +8,7 @@ class GfcsController < ApplicationController
   end
 
   def my_classes
-    @my_gfcs = Gfc.where(user: :current_user)
+    @gfcs = Gfc.where(user: current_user).order(updated_at: :desc)
   end
   
   # GET /gfcs/1 or /gfcs/1.json

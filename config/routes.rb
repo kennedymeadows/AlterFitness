@@ -16,10 +16,15 @@ Rails.application.routes.draw do
   end
   resources :gfcs do
     member do
+      get :my_classes
+    end
+    member do
       post :send_to_display
       patch :send_to_display
     end
   end
+
+  get 'my_classes' => 'gfcs#my_classes'
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
