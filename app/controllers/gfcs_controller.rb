@@ -33,6 +33,7 @@ class GfcsController < ApplicationController
     @old_display = Gfc.where(studio: true)
     @old_display.update_all(studio: false)
     @gfc.update_attribute(:studio, true)
+    redirect_to gfc_url(@gfc), notice: "This class has been sent to the display."
   end
 
 

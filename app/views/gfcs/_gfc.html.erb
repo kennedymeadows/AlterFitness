@@ -11,7 +11,7 @@
       <div class="card">
         <div class="card-body">
           <% if @workout_blocks.size >= 1 %>
-            <h5 class="card-title"><%= gfc.workout_blocks.first.name %></h5>
+            <h5 class="card-title">A: <%= gfc.workout_blocks.first.name %></h5>
             <p class="card-text"><%= render @workout_blocks.first %></p>
           <% end %>
         </div>
@@ -21,7 +21,7 @@
       <div class="card">
         <div class="card-body">
           <% if @workout_blocks.size >= 2 %>
-            <h5 class="card-title"><%= gfc.workout_blocks.second.name %></h5>
+            <h5 class="card-title">B: <%= gfc.workout_blocks.second.name %></h5>
             <p class="card-text"><%= render @workout_blocks.second %></p>
           <% end %>
         </div>
@@ -33,7 +33,7 @@
       <div class="card">
         <div class="card-body">
           <% if @workout_blocks.size >= 3 %>
-            <h5 class="card-title"><%= gfc.workout_blocks.third.name %></h5>
+            <h5 class="card-title">C: <%= gfc.workout_blocks.third.name %></h5>
             <p class="card-text"><%= render @workout_blocks.third %></p>
           <% end %>
         </div>
@@ -43,7 +43,7 @@
       <div class="card">
         <div class="card-body">
           <% if @workout_blocks.size >= 4 %>
-            <h5 class="card-title"><%= gfc.workout_blocks.fourth.name %></h5>
+            <h5 class="card-title">D: <%= gfc.workout_blocks.fourth.name %></h5>
             <p class="card-text"><%= render @workout_blocks.fourth %></p>
           <% end %>
         </div>
@@ -55,7 +55,7 @@
       <div class="card">
         <div class="card-body">
           <% if @workout_blocks.size >= 5 %>
-            <h5 class="card-title"><%= gfc.workout_blocks.fifth.name %></h5>
+            <h5 class="card-title">E: <%= gfc.workout_blocks.fifth.name %></h5>
             <p class="card-text"><%= render @workout_blocks.fifth %></p>
           <% end %>
         </div>

@@ -1,14 +1,18 @@
-<div class="container" style="margin-top:50px;">
-  <%= render @gfc %>
-</div>
-<br>
-<div class="container">
+
+<div class="container mt-5">
   <div class="btn-group float-end">
     <%= link_to "Back to all classes", gfcs_path, class:"btn btn-secondary"%>
-    <%= button_to "Send to Display", send_to_display_gfc_path(@gfc), class:"btn btn-primary", method: :post %>
+    <% if @gfc.studio == false %>
+      <%= button_to "Send to Display", send_to_display_gfc_path(@gfc), class:"btn btn-primary", method: :post %>
+    <% else %>
+      <button type="button" class="btn btn-primary" disabled>Currently Displayed</button>
+    <% end %>
     <% if @gfc.user == current_user %>
       <%= button_to "Delete this class", @gfc, class:"btn btn-danger", method: :delete %>
     <% end %>
-    </div>
+  </div>
+</div>
+<div class="container mt-5">
+  <%= render @gfc %>
 </div>
 </div>
