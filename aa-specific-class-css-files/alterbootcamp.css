@@ -32,7 +32,7 @@
   position: absolute;
   display: grid;
   grid-template-rows: 1080px;
-  grid-template-columns: 1900px 910px 1535px 910px 1535px 910px 1900px;
+  grid-template-columns: 1800px 1010px 1485px 1010px 1485px 1010px 1800px;
 }
 
 /* Dead space, also serves as the container for the clock if used */
@@ -79,12 +79,12 @@
 }
 
 .block-title-span {
-  padding-left: 140px;
+  text-align: center;
 }
 
 /* These are the sections which contain the lists of workouts */
 .workouts-column {
-  width: 910px;
+  width: 1010px;
   white-space: nowrap;
   text-overflow: "";
   overflow: hidden;
@@ -96,7 +96,7 @@
   padding: 0;
 }
 .workout-sub-block ul {
-  font-size: 80px;
+  font-size: 70px;
   list-style: none;
   padding-left: none;
   padding-top: 20px;
@@ -190,10 +190,9 @@
 .meta-title {
   display: grid;
   font-family: "Barlow Condensed";
-  grid-template-rows: 220px 200px 1fr;
+  grid-template-rows: 260px 260px 1fr;
   grid-template-columns: 1fr;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .right-meta {
@@ -205,8 +204,8 @@
 
 .title-grid {
   font-size: 180px;
-  padding-top: 50px;
   align-self: end;
+  text-transform: uppercase;
 }
 
 .right-title {

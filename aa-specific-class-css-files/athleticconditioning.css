@@ -38,7 +38,7 @@
   position: absolute;
   display: grid;
   grid-template-rows: 1080px;
-  grid-template-columns: 900px 300px 910px 1100px 910px 1360px 910px 1100px 910px 300px 900px;
+  grid-template-columns: 900px 250px 1010px 1000px 1010px 1260px 1010px 1000px 1010px 250px 900px;
 }
 
 /* Dead space, also serves as the container for the clock if used */
@@ -90,7 +90,7 @@
 
 /* These are the sections which contain the lists of workouts */
 .workouts-column {
-  width: 910px;
+  width: 1010px;
   white-space: nowrap;
   text-overflow: "";
   overflow: hidden;
@@ -102,104 +102,30 @@
   padding: 0;
 }
 .workout-sub-block ul {
-  font-size: 80px;
+  font-size: 70px;
   list-style: none;
   padding-left: none;
   padding-top: 20px;
   line-height: 110px;
 }
 
-.first-half-list {
-  counter-reset: item;
-}
-
-.second-half-list {
-  counter-reset: item 5;
-}
-
 .workout-sub-block li {
   margin-left: 0;
-  /* border-bottom: 4px solid white; */
   text-transform: capitalize;
   counter-increment: item;
 }
-/* .workout-sub-block li:before {
-  content: counter(item, decimal-leading-zero) ".";
-  display: inline-block;
-  width: 140px;
-} */
+
 .workout-sub-block li:nth-of-type(1n + 6) {
   display: none;
 }
 
-/* The extra workouts section, for this layout it's tabatas */
-.additional-workouts-block {
-  display: grid;
-  align-items: center;
-  grid-template-rows: 1fr;
-  grid-template-columns: 500px 1fr 500px 1fr 500px;
-}
-.tabata-cross {
-  display: grid;
-  grid-template-rows: 150px 150px;
-}
-
-.tabata-title {
-  border-bottom: 4px solid white;
-  font-size: 60px;
-  text-transform: uppercase;
-  align-self: end;
-  text-align: center;
-  padding-bottom: 10px;
-  font-family: "Barlow Condensed";
-}
-
-.tabata-workout-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: left;
-}
-
-.additional-workouts-block ul .additional-workouts-block li {
-  margin: 0;
-  padding: 0;
-}
-
-.additional-workouts-block ul {
-  font-size: 36px;
-  list-style: none;
-  padding-left: none;
-
-  line-height: 50px;
-  counter-reset: item;
-}
-
-.additional-workouts-block li {
-  white-space: nowrap;
-  text-overflow: "";
-  overflow: hidden;
-  margin-left: 0;
-  /* border-bottom: 4px solid white; */
-  text-transform: capitalize;
-  counter-increment: item;
-}
-.additional-workouts-block li:before {
-  content: counter(item, decimal-leading-zero) ".";
-  display: inline-block;
-  width: 80px;
-}
-.additional-workouts-block li:nth-of-type(1n + 3) {
-  display: none;
-}
-
-/* The center section */
+/* The title section */
 .meta-title {
   display: grid;
   font-family: "Barlow Condensed";
-  grid-template-rows: 400px 200px 1fr;
+  grid-template-rows: 400px 240px 1fr;
   grid-template-columns: 1fr;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .right-meta {
@@ -211,22 +137,23 @@
 
 .title-grid {
   font-size: 160px;
-  padding-top: 50px;
   align-self: end;
+  text-transform: uppercase;
 }
 
 .right-title {
   text-align: right;
-  padding-right: 200px;
+  padding-right: 100px;
 }
 .left-title {
   text-align: left;
-  padding-left: 200px;
+  padding-left: 100px;
 }
 
 .instructor-grid {
   font-size: 100px;
-  align-self: end;
+  align-self: center;
+  justify-content: space-between;
 }
 
 .triangle-logo {

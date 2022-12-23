@@ -2,7 +2,12 @@
         <!-- Blank space on the left -->
         <div class="meta-title left-meta">
           <div class="title-grid left-title"><%= @studio.class_type.title %></div>
-          <div class="instructor-grid left-title"><%= @studio.user.full_name %></div>
+          <div class="instructor-grid left-title">
+            <span style="text-transform: uppercase;"><%= @studio.user.full_name %></span>
+            <% if @studio.user.social_handle != nil %>
+              <span style="font-size: 70px; display:block;">@<%= @studio.user.social_handle %></span>
+            <% end %>
+          </div>
           <%= image_tag("PNG/1600w/White-Triangle-Outline-Alter Brandmark-1600px-RGB.png", class: "triangle-logo left-title") %>
         </div>
         <!-- This is the left information block -->
@@ -10,13 +15,13 @@
           <div class="block-title-grid">
             <div class="block-title">
               <span class="block-title-span"
-                ><%= @studio.workout_blocks.first.name %></span
+                >Flow 1</span
               >
             </div>
             <div></div>
             <div class="block-title">
               <span class="block-title-span"
-                ><%= @studio.workout_blocks.second.name %></span
+                >Flow 2</span
               >
             </div>
           </div>
@@ -41,13 +46,13 @@
           <div class="block-title-grid">
             <div class="block-title">
               <span class="block-title-span"
-                ><%= @studio.workout_blocks.first.name %></span
+                >Flow 1</span
               >
             </div>
             <div></div>
             <div class="block-title">
               <span class="block-title-span"
-                ><%= @studio.workout_blocks.second.name %></span
+                >Flow 2</span
               >
             </div>
           </div>
@@ -68,7 +73,12 @@
         <!-- Blank space on the right -->
         <div class="meta-title right-meta">
           <div class="title-grid right-title"><%= @studio.class_type.title %></div>
-          <div class="instructor-grid right-title"><%= @studio.user.full_name %></div>
-          <%= image_tag("PNG/1600w/White-Triangle-Outline-Alter Brandmark-1600px-RGB.png", class: "triangle-logo right-title") %>
+          <div class="instructor-grid right-title">
+            <span style="text-transform: uppercase;"><%= @studio.user.full_name %></span>
+            <% if @studio.user.social_handle != nil %>
+              <span style="font-size: 70px; display:block;">@<%= @studio.user.social_handle %></span>
+            <% end %>
+          </div>
+         <%= image_tag("PNG/1600w/White-Triangle-Outline-Alter Brandmark-1600px-RGB.png", class: "triangle-logo right-title") %>
         </div>
       </div>

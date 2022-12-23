@@ -8,7 +8,12 @@
         <!-- Blank space on the left -->
         <div class="meta-title left-meta">
           <div class="title-grid left-title"><%= @studio.class_type.title %></div>
-          <div class="instructor-grid left-title"><%= @studio.user.full_name %></div>
+          <div class="instructor-grid left-title">
+            <span style="text-transform: uppercase;"><%= @studio.user.full_name %></span>
+            <% if @studio.user.social_handle != nil %>
+              <span style="font-size: 70px; display:block;">@<%= @studio.user.social_handle %></span>
+            <% end %>
+          </div>
           <%= image_tag("PNG/1600w/White-Triangle-Outline-Alter Brandmark-1600px-RGB.png", class: "triangle-logo left-title") %>
         </div>
         <!-- This is the left information block -->
@@ -17,13 +22,13 @@
           <div class="block-title-grid">
             <div class="block-title">
               <span class="block-title-span"
-                ><%= @studio.workout_blocks.first.name %></span
+                >Red</span
               >
             </div>
           </div>
           <div class="workout-sub-block">
             <div class="workouts-column">
-              <ul>
+              <ul style="">
                 <%= @studio.workout_blocks.first.body %>
               </ul>
             </div>
@@ -36,7 +41,7 @@
           <div class="block-title-grid">
             <div class="block-title">
               <span class="block-title-span"
-                ><%= @studio.workout_blocks.second.name %></span
+                >Blue</span
               >
             </div>
           </div>
@@ -55,7 +60,7 @@
           <div class="block-title-grid">
             <div class="block-title">
               <span class="block-title-span"
-                ><%= @studio.workout_blocks.third.name %></span
+                >Yellow</span
               >
             </div>
           </div>
@@ -74,7 +79,7 @@
           <div class="block-title-grid">
             <div class="block-title">
               <span class="block-title-span"
-                ><%= @studio.workout_blocks.fourth.name %></span
+                >Green</span
               >
             </div>
           </div>
@@ -90,7 +95,12 @@
         <!-- Blank space on the right -->
         <div class="meta-title right-meta">
           <div class="title-grid right-title"><%= @studio.class_type.title %></div>
-          <div class="instructor-grid right-title"><%= @studio.user.full_name %></div>
+          <div class="instructor-grid right-title">
+            <span style="text-transform: uppercase;"><%= @studio.user.full_name %></span>
+            <% if @studio.user.social_handle != nil %>
+              <span style="font-size: 70px; display:block;">@<%= @studio.user.social_handle%></span>
+            <% end %>
+          </div>
           <%= image_tag("PNG/1600w/White-Triangle-Outline-Alter Brandmark-1600px-RGB.png", class: "triangle-logo right-title") %>
         </div>
       </div>
