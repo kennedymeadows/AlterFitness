@@ -14,7 +14,7 @@
         <th scope="col">Class Format</th>
         <th scope="col">Video Background</th>
         <th scope="col">Created By</th>
-        <th scope="col">Last Modified</th>
+        <th scope="col">Creation Date</th>
       </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@
         <td><%= gfc.class_type.title %></td>
         <td><%= gfc.class_type.video.name %></td>
         <td><%= link_to gfc.user.full_name, user_path(gfc.user) %></td>
-        <td><%= gfc.updated_at.strftime("%Y-%m-%d") %></td>
+        <td><%= gfc.created_at.strftime("%Y-%m-%d") %></td>
       <% end %>
     </tbody>
     </table>

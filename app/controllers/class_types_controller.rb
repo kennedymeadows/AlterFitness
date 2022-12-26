@@ -4,7 +4,7 @@ class ClassTypesController < ApplicationController
 
   # GET /class_types or /class_types.json
   def index
-    @class_types = ClassType.all
+    @class_types = ClassType.all.order(title: :asc)
   end
 
   # GET /class_types/1 or /class_types/1.json
