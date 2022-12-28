@@ -1,4 +1,4 @@
-.whole-wall-grid {
+#yogaathlete .whole-wall-grid {
   position: absolute;
   display: grid;
   grid-template-rows: 1080px;
@@ -6,40 +6,40 @@
 }
 
 /* Dead space, also serves as the container for the clock if used */
-.border {
+#yogaathlete .border {
   border: 0;
   border-width: 0px;
 }
 
 /* The live clock which is tied to the javascript script section */
-.clock-container-left,
-.clock-container-right {
+#yogaathlete .clock-container-left,
+#yogaathlete .clock-container-right {
   font-size: 80px;
   display: grid;
 }
-.clock-container-left {
+#yogaathlete .clock-container-left {
   justify-items: left;
 }
-.clock-container-right {
+#yogaathlete .clock-container-right {
   justify-items: right;
 }
 
 /* Whole container for the workout block and information sections */
-.workout-block {
+#yogaathlete .workout-block {
   display: grid;
   grid-template-rows: 220px 860px;
 }
 
 /* These three classes make up the title section of the 
   workout blocks */
-.block-title-grid {
+#yogaathlete .block-title-grid {
   font-family: "Barlow Condensed";
   display: grid;
   grid-template-rows: 220px;
   grid-template-columns: 910px 140px 910px;
 }
 
-.block-title {
+#yogaathlete .block-title {
   display: grid;
   font-size: 90px;
   padding-bottom: 20px;
@@ -48,29 +48,29 @@
   align-self: end;
 }
 
-.block-title-span {
+#yogaathlete .block-title-span {
   padding-left: 140px;
 }
 
 /* These are the sections which contain the lists of workouts */
-.workouts-column {
+#yogaathlete .workouts-column {
   width: 910px;
   white-space: nowrap;
   text-overflow: "";
   overflow: hidden;
 }
 
-.workout-sub-block {
+#yogaathlete .workout-sub-block {
   display: grid;
   grid-template-columns: 910px 140px 910px;
 }
 
-ul,
-li {
+#yogaathlete ul,
+#yogaathlete li {
   margin: 0;
   padding: 0;
 }
-ul {
+#yogaathlete ul {
   font-size: 50px;
   list-style: none;
   padding-left: none;
@@ -78,13 +78,13 @@ ul {
   line-height: 90px;
   counter-reset: item;
 }
-li {
+#yogaathlete li {
   margin-left: 0;
   /* border-bottom: 4px solid white; */
   text-transform: capitalize;
   counter-increment: item;
 }
-li:before {
+#yogaathlete li:before {
   content: counter(item, decimal-leading-zero) ".";
   display: inline-block;
   width: 140px;
@@ -95,7 +95,7 @@ li:nth-of-type(1n + 9) {
 
 /* The title section */
 
-.meta-title {
+#yogaathlete .meta-title {
   display: grid;
   font-family: "Barlow Condensed";
   grid-template-rows: 260px 260px 1fr;
@@ -103,34 +103,34 @@ li:nth-of-type(1n + 9) {
   text-align: center;
 }
 
-.right-meta {
+#yogaathlete .right-meta {
   justify-items: end;
 }
-.left-meta {
+#yogaathlete .left-meta {
   justify-items: start;
 }
 
-.title-grid {
+#yogaathlete .title-grid {
   font-size: 180px;
   align-self: end;
   text-transform: uppercase;
 }
 
-.right-title {
+#yogaathlete .right-title {
   text-align: right;
   padding-right: 200px;
 }
-.left-title {
+#yogaathlete .left-title {
   text-align: left;
   padding-left: 200px;
 }
 
-.instructor-grid {
+#yogaathlete .instructor-grid {
   font-size: 120px;
   align-self: end;
 }
 
-.triangle-logo {
+#yogaathlete .triangle-logo {
   width: 400px;
   align-self: center;
 }

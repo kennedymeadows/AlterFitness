@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <%= stylesheet_link_tag "studio" %>
     <%= stylesheet_link_tag "videoonly" %>
+    <%= stylesheet_link_tag class_template_id %>
    
     
     <link
@@ -46,7 +47,7 @@
     </script>
   </head>
   <body>
-    <div class="body-container">
+    <div class="body-container" id="<%= class_template_id %>">
       <% video_url = "http://localhost:9990/" + @studio.class_type.video.filename%> 
       <%= video_tag(video_url,
           size: "9600x1080",
