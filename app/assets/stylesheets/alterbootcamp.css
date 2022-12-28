@@ -1,124 +1,144 @@
-.whole-wall-grid {
+#alterbootcamp .gradient-underlays {
   position: absolute;
   display: grid;
   grid-template-rows: 1080px;
-  grid-template-columns: 1900px 1960px 1880px 1960px 1900px;
+  grid-template-columns: 3200px 3200px 3200px;
+}
+
+#alterbootcamp .gb-red {
+  background-image: linear-gradient(
+    rgba(175, 55, 51, 0.6),
+    rgba(175, 55, 51, 0.2)
+  );
+}
+
+#alterbootcamp .gb-blue {
+  background-image: linear-gradient(
+    rgba(0, 156, 221, 0.6),
+    rgba(0, 156, 221, 0.2)
+  );
+}
+
+#alterbootcamp .gb-green {
+  background-image: linear-gradient(
+    rgba(55, 141, 72, 0.6),
+    rgba(55, 141, 72, 0.2)
+  );
+}
+
+/* The wall grid */
+
+#alterbootcamp .whole-wall-grid {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 1080px;
+  grid-template-columns: 1800px 1010px 1485px 1010px 1485px 1010px 1800px;
 }
 
 /* Dead space, also serves as the container for the clock if used */
-.border {
+#alterbootcamp .border {
   display: grid;
   padding-top: 150px;
   justify-items: center;
 }
 
 /* The live clock which is tied to the javascript script section */
-.clock-container-left,
-.clock-container-right {
+#alterbootcamp .clock-container-left,
+#alterbootcamp .clock-container-right {
   font-size: 80px;
   display: grid;
 }
-.clock-container-left {
+#alterbootcamp .clock-container-left {
   justify-items: left;
 }
-.clock-container-right {
+#alterbootcamp .clock-container-right {
   justify-items: right;
 }
 
 /* Whole container for the workout block and information sections */
-.workout-block {
+#alterbootcamp .workout-block {
   display: grid;
-  grid-template-rows: 220px 500px 360px;
+  grid-template-rows: 380px 700px;
 }
 
 /* These three classes make up the title section of the 
   workout blocks */
-.block-title-grid {
+#alterbootcamp .block-title-grid {
   font-family: "Barlow Condensed";
   display: grid;
-  grid-template-rows: 220px;
   grid-template-columns: 1fr;
 }
 
-.block-title {
+#alterbootcamp .block-title {
   display: grid;
-  align-items: center;
-  font-size: 90px;
+  font-size: 120px;
   align-self: end;
   padding-bottom: 20px;
   text-transform: uppercase;
   border-bottom: 12px solid white;
 }
 
-.block-title-span {
+#alterbootcamp .block-title-span {
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 0px;
-  /* padding-left: 140px; */
 }
 
 /* These are the sections which contain the lists of workouts */
-.workouts-column {
-  width: 910px;
+#alterbootcamp .workouts-column {
+  width: 1010px;
   white-space: nowrap;
   text-overflow: "";
   overflow: hidden;
 }
 
-.workout-sub-block {
-  display: grid;
-  grid-template-columns: 910px 140px 910px;
-}
-
-.workout-sub-block ul,
-.workout-sub-block li {
+#alterbootcamp .workout-sub-block ul,
+#alterbootcamp .workout-sub-block li {
   margin: 0;
   padding: 0;
 }
-.workout-sub-block ul {
-  font-size: 50px;
+#alterbootcamp .workout-sub-block ul {
+  font-size: 70px;
   list-style: none;
   padding-left: none;
   padding-top: 20px;
-  line-height: 90px;
+  line-height: 110px;
 }
 
-.first-half-list {
+#alterbootcamp .first-half-list {
   counter-reset: item;
 }
 
-.second-half-list {
+#alterbootcamp .second-half-list {
   counter-reset: item 5;
 }
 
-.workout-sub-block li {
+#alterbootcamp .workout-sub-block li {
   margin-left: 0;
   /* border-bottom: 4px solid white; */
   text-transform: capitalize;
   counter-increment: item;
 }
-.workout-sub-block li:before {
+#alterbootcamp .workout-sub-block li:before {
   content: counter(item, decimal-leading-zero) ".";
   display: inline-block;
   width: 140px;
 }
-.workout-sub-block li:nth-of-type(1n + 6) {
+#alterbootcamp .workout-sub-block li:nth-of-type(1n + 6) {
   display: none;
 }
 
 /* The extra workouts section, for this layout it's tabatas */
-.additional-workouts-block {
+#alterbootcamp .additional-workouts-block {
   display: grid;
   align-items: center;
   grid-template-rows: 1fr;
   grid-template-columns: 500px 1fr 500px 1fr 500px;
 }
-.tabata-cross {
+#alterbootcamp .tabata-cross {
   display: grid;
   grid-template-rows: 150px 150px;
 }
 
-.tabata-title {
+#alterbootcamp .tabata-title {
   border-bottom: 4px solid white;
   font-size: 60px;
   text-transform: uppercase;
@@ -128,18 +148,19 @@
   font-family: "Barlow Condensed";
 }
 
-.tabata-workout-grid {
+#alterbootcamp .tabata-workout-grid {
   display: grid;
   grid-template-columns: 1fr;
   align-items: left;
 }
 
-.additional-workouts-block ul .additional-workouts-block li {
+#alterbootcamp .additional-workouts-block ul,
+#alterbootcamp .additional-workouts-block li {
   margin: 0;
   padding: 0;
 }
 
-.additional-workouts-block ul {
+#alterbootcamp .additional-workouts-block ul {
   font-size: 36px;
   list-style: none;
   padding-left: none;
@@ -148,7 +169,7 @@
   counter-reset: item;
 }
 
-.additional-workouts-block li {
+#alterbootcamp .additional-workouts-block li {
   white-space: nowrap;
   text-overflow: "";
   overflow: hidden;
@@ -157,18 +178,17 @@
   text-transform: capitalize;
   counter-increment: item;
 }
-.additional-workouts-block li:before {
+#alterbootcamp .additional-workouts-block li:before {
   content: counter(item, decimal-leading-zero) ".";
   display: inline-block;
   width: 80px;
 }
-.additional-workouts-block li:nth-of-type(1n + 3) {
+#alterbootcamp .additional-workouts-block li:nth-of-type(1n + 3) {
   display: none;
 }
 
-/* The title section */
-
-.meta-title {
+/* The center section */
+#alterbootcamp .meta-title {
   display: grid;
   font-family: "Barlow Condensed";
   grid-template-rows: 260px 260px 1fr;
@@ -176,34 +196,34 @@
   text-align: center;
 }
 
-.right-meta {
+#alterbootcamp .right-meta {
   justify-items: end;
 }
-.left-meta {
+#alterbootcamp .left-meta {
   justify-items: start;
 }
 
-.title-grid {
+#alterbootcamp .title-grid {
   font-size: 180px;
   align-self: end;
   text-transform: uppercase;
 }
 
-.right-title {
+#alterbootcamp .right-title {
   text-align: right;
   padding-right: 200px;
 }
-.left-title {
+#alterbootcamp .left-title {
   text-align: left;
   padding-left: 200px;
 }
 
-.instructor-grid {
+#alterbootcamp .instructor-grid {
   font-size: 120px;
   align-self: end;
 }
 
-.triangle-logo {
+#alterbootcamp .triangle-logo {
   width: 400px;
   align-self: center;
 }
